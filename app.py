@@ -4,3 +4,6 @@ movies = open("./movies.json", encoding="utf8")
 ## create variable "data" that represents the enitre movie list
 data = json.load(movies)
 
+for "title" in data:
+    if "title" in data:
+        print(data["title"])
