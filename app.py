@@ -10,12 +10,35 @@ data = json.load(movies)
 year=input("give me a year I will print all movies that released after that year: ")
 for i in range(len(data)):
     if data[i]['year'] > int(year):
-        print(data[i]['title']) """
+        print(data[i]['title']) 
 
-afteryear=input("give me a year I will print all movies that released after that year: ")
-beforeyear=input("give me a another year i'll print all the moives before it: ")
+limitbottom=input("give me a year I will print all movies that released after that year: ")
+limittop=input("give me a another year i'll print all the moives before it: ")
 for i in range(len(data)):
-    if data[i]['year'] > int(afteryear):
+    if data[i]['year'] > int(limitbottom) and data[i]['year'] < int(limittop):
         print(data[i]['title'])
-    if data[i]['year'] < int(afteryear):
-            print(data[i]['title'])
+
+year=input("give me a year I will print all movies that released during that year: ")
+for i in range(len(data)):
+    if data[i]['year'] == int(year):
+        print(data[i]['title']) 
+movname=input("Search movie title: ")
+for i in range(len(data)):
+    if data[i]['title'] == movname:
+        print(f"Results:{data[i]['title']} ({data[i]['year']})")
+    
+def Search(movname):
+    for i in range(len(data)):
+        if data[i]['title'] == movname:
+            print(f"Results:{data[i]['title']} ({data[i]['year']})") 
+Search("Spider-Man") """
+
+def genre(type):
+    for i in range(len(data)):
+        if data[i]['genres'] == type:
+            print(f"Results:{data[i]['title']} ({data[i]['year']})") 
+genre("Action")
+
+
+
+
