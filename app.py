@@ -37,7 +37,7 @@ def genre(type):
     for i in range(len(data)):
         if data[i]['genres'] == type:
             print(f"Results:{data[i]['title']} ({data[i]['year']})") 
-genre("Action")
+genre('Action')
 
 
 
