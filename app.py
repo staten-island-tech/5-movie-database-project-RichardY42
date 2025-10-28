@@ -35,7 +35,7 @@ Search("Spider-Man") """
 
 def genre(type):
     for i in range(len(data)):
-        if data[i]['genres'] == type:
+        if type in data[i]['genres']:
             print(f"Results:{data[i]['title']} ({data[i]['year']})") 
 genre('Action')
 
